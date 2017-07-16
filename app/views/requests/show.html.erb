@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Library:</strong>
+  <%= @request.library %>
+</p>
+
+<p>
+  <strong>Librarian:</strong>
+  <%= @request.librarian %>
+</p>
+
+<p>
+  <strong>Program:</strong>
+  <%= @request.program %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @request.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @request.phone %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @request.date %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @request.time %>
+</p>
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>
