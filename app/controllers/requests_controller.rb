@@ -28,7 +28,7 @@ class RequestsController < ApplicationController
 
     respond_to do |format|
       if @request.save
-        format.html { redirect_to @request, notice: 'Request was successfully created.' }
+        format.html { redirect_to @request, notice: 'Request was successfully created. You may edit or delete your request for 5 minutes.' }
         format.json { render :show, status: :created, location: @request }
       else
         format.html { render :new }
