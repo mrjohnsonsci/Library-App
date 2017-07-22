@@ -10,43 +10,23 @@
       </ul>
     </div>
   <% end %>
+  
 
-  <div class="field">
-    <%= f.label :library %>
-    <%= f.text_field :library %>
-  </div>
 
-  <div class="field">
-    <%= f.label :librarian %>
-    <%= f.text_field :librarian %>
-  </div>
+<%= simple_form_for @request do |f| %>
+  <%= f.input :library, label: 'What is the name of your library?' %>
+  <%= f.input :librarian, label: 'Contact Name'%>
+  <%= f.input :program, label: 'Which program would you like to request?' %>
+  <%= f.input :email, label: 'Contact email' %>
+  <%= f.input :phone, label: 'Phone Number'%>
+  <%= f.input :date, hint: '"June 16th"' %>
+  <%= f.input :time, hint: '"11:00am"'%>
+  <%= f.button :submit %>
+<% end %>
 
-  <div class="field">
-    <%= f.label :program %>
-    <%= f.text_field :program %>
-  </div>
 
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
 
-  <div class="field">
-    <%= f.label :phone %>
-    <%= f.text_field :phone %>
-  </div>
+<p>"Sending this request will create an email to both of us.  You'll also be able to edit this request for 5 minutes after it is created."</p>
 
-  <div class="field">
-    <%= f.label :date %>
-    <%= f.text_field :date %>
-  </div>
 
-  <div class="field">
-    <%= f.label :time %>
-    <%= f.text_field :time %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>
