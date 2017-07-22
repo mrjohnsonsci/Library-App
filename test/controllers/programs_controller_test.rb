@@ -26,4 +26,24 @@ class ProgramsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get rock" do
+    get programs_rock_url
+    assert_response :success
+  end
+
+  test "should get space" do
+    get programs_space_url
+    assert_response :success
+  end
+
+  test "should get overview" do
+    get programs_overview_url
+    assert_response :success
+  end
+
+  test "should get maker" do
+    get programs_maker_url
+    assert_response :success
+  end
+
 end

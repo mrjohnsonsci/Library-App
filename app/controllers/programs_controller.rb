@@ -13,4 +13,16 @@ class ProgramsController < ApplicationController
 
   def future
   end
+
+  def rock
+  end
+
+  def space
+  end
+
+  def overview
+  end
+
+  def maker
+  end
 end
