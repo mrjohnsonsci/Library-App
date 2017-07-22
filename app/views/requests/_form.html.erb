@@ -15,6 +15,7 @@
 
 <%= simple_form_for @request do |f| %>
   <%= f.input :library, label: 'What is the name of your library?' %>
+  <%= f.input :address, label: 'What is the address of your library?' %>  
   <%= f.input :librarian, label: 'Contact Name'%>
   <%= f.input :program, label: 'Which program would you like to request?' %>
   <%= f.input :email, label: 'Contact email' %>

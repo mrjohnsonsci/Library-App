@@ -4,11 +4,22 @@
   <br>
 
 <%= link_to 'Make a New Request', new_request_path, class: "btn btn-lg btn-primary"%>
-<h1>Library Program Requests</h1>
+<h3>Creating a request will create an email to both of us with all the required information.</h3>
+
+<br><br><br>
+
+Please check the availibity your requested date below.
+<br><br><br>
+<div class="row">
+<div class="col-md-8"</div>
+  
 
 
  <div class="col-md-6">
  <table class="table table-striped">
+   <h1>Unprocessed Library Program Requests</h1>
+
+<h3>I will be processing these requests once or twice a month. </h3>
   <thead>
     <tr>
       <th>Library</th>
@@ -37,5 +48,12 @@
 <br>
 
 <%= link_to 'New Request', new_request_path%>
-
+ </div>
+      <div class="col-md-4"></div>
+      
+      <h1>Unavailable Dates</h1>
+      <p>Dates that have confirmed programs are listed below.</p>
+      
+      
+      </div>
 
