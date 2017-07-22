@@ -7,8 +7,10 @@
                                               'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= render 'layouts/shim' %>
+    <%= render 'layouts/metahead' %>
   </head>
   <body>
+    <%= render 'layouts/bootstrap' %>    
     <%= render 'layouts/header' %>
     <div class="container">
       <% flash.each do |message_type, message| %>
@@ -16,6 +18,7 @@
       <% end %>
       <%= yield %>
       <%= render 'layouts/footer' %>
+      <%= render 'layouts/bootstrapfooter' %>
       <%= debug(params) if Rails.env.development? %>
     </div>
   </body>

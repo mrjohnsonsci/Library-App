@@ -1,20 +1,4 @@
 Rails.application.routes.draw do
-  get 'programs/maker'
-
-  get 'programs/overview'
-
-  get 'programs/lumpa'
-
-  get 'programs/marble'
-
-  get 'programs/doodle'
-
-  get 'programs/climate'
-
-  get 'programs/rock'
-
-  get 'programs/space'
-
   root   'static_pages#home'
   get    '/reviews',    to: 'static_pages#reviews'
   get    '/media',      to: 'static_pages#media'
@@ -25,7 +9,10 @@ Rails.application.routes.draw do
   get 'programs/doodle'
   get 'programs/climate'
   get 'programs/future'
-
+  get 'programs/maker'
+  get 'programs/overview'
+  get 'programs/rock'
+  get 'programs/space'
   resources :requests
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
