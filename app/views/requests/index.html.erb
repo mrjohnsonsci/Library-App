@@ -11,11 +11,11 @@
 Please check the availibity your requested date below.
 <br><br><br>
 <div class="row">
-<div class="col-md-8"</div>
+<div class="col-md-6"</div>
   
 
 
- <div class="col-md-6">
+
  <table class="table table-striped">
    <h1>Unprocessed Library Program Requests</h1>
 
@@ -31,15 +31,17 @@ Please check the availibity your requested date below.
   </thead>
 
   <tbody>
-    <% @requests.each do |request| %>
+    <% @requests.each do |request|  %>
       <tr>
-        <td><%= request.library %></td>
-        <td><%= request.program %></td>
-        <td><%= request.date %></td>
-        <td><%= request.time %></td>
-        <td><%= if request.created_at > 5.minutes.ago  then link_to 'Show', request end %></td>
-        <td><%= if request.created_at > 5.minutes.ago then link_to 'Edit', edit_request_path(request) end %></td>
-        <td><%= if request.created_at > 5.minutes.ago then link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' }end %></td>
+        <% if request.confirmation == false %>
+          <td><%= request.library %></td>
+          <td><%= request.program %></td>
+          <td><%= request.date %></td>
+          <td><%= request.time %></td>
+          <td><%= link_to 'Show', request %></td>
+          <td><%= link_to 'Edit', edit_request_path(request) %></td>
+          <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -49,10 +51,10 @@ Please check the availibity your requested date below.
 
 <%= link_to 'New Request', new_request_path%>
  </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
       
       <h1>Unavailable Dates</h1>
-      <p>Dates that have confirmed programs are listed below.</p>
+      <p>Confirmed programs are listed below.</p>
       
       
       </div>

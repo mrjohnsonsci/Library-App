@@ -9,6 +9,12 @@ class Request < ApplicationRecord
   validates :phone, presence: true, length: { minimum: 8 }
   validates :date, presence: true
   validates :time, presence: true
-  validates :address, presence: true, length: { minimum: 12 }
+ # validates :address, presence: true, length: { minimum: 12 }
+  before_save :default_confirm
 
+  def default_confirm
+    self.confirmation = false
+    true
+  end
 end
+
