@@ -25,4 +25,8 @@ class ProgramsController < ApplicationController
 
   def maker
   end
+  
+  def requests
+    requests_path
+  end
 end
