@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get    '/overview',   to: 'programs#overview'
   get    '/rock',       to: 'programs#rock'
   get    '/space',      to: 'programs#space'
+  get    '/confirm',    to: 'requests#confirm'
   get 'programs/requests'
   get 'programs/lumpa'
   get 'programs/marble'

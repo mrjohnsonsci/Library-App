@@ -11,8 +11,6 @@
     </div>
   <% end %>
   
-
-
 <%= simple_form_for @request do |f| %>
   <%= f.input :library, label: 'What is the name of your library?' %>
   <%= f.input :address, label: 'What is the address of your library?' %>  
@@ -22,10 +20,7 @@
   <%= f.input :phone, label: 'Phone Number'%>
   <%= f.input :date, hint: '"June 16th"' %>
   <%= f.input :time, hint: '"11:00am"'%>
+ <%= f.input :confirmation %>
   <%= f.button :submit %>
 <% end %>
-
-
-
-
 <% end %>
