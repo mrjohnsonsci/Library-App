@@ -7,6 +7,10 @@ class RequestsController < ApplicationController
     @requests = Request.all
   end
 
+  def confirm
+    @requests = Request.all
+  end
+
   # GET /requests/1
   # GET /requests/1.json
   def show
@@ -56,7 +60,7 @@ class RequestsController < ApplicationController
   def destroy
     @request.destroy
     respond_to do |format|
-      format.html { redirect_to requests_url, notice: 'Request was successfully destroyed.' }
+      format.html { redirect_to requests_url, notice: 'Request was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -68,7 +72,9 @@ class RequestsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def request_params
-      params.require(:request).permit(:library, :librarian, :program, :email, :phone, :date, :time)
-    end
+def request_params
+  params.require(:request).permit(:library, :librarian, :program, :email, :phone,
+                                    :date, :time, :address, :address, :confirmation)
+end
+
 end
