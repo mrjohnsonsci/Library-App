@@ -8,9 +8,9 @@
 25.times do |n|
   l  = Faker::Name.name
   lib  = "Library-#{n+1}"
-  phone  = "(507) - #{0000000 + (9 * n)}"  
+  phone  = "(507) 555 -01 #{0000000 + (3 * n)}"  
   email = "example-#{n+1}@example.org"
-  D = "June #{n+3}"
+  D = "2018-06-#{n+10}"
   
   Request.create!(librarian:  l,
                library: lib,

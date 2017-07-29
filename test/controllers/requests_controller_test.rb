@@ -3,6 +3,7 @@ require 'test_helper'
 class RequestsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @request = requests(:one)
+    @request.date = "june 31s"
   end
 
   test "should get index" do

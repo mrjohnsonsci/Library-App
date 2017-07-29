@@ -11,16 +11,45 @@
     </div>
   <% end %>
   
-<%= simple_form_for @request do |f| %>
-  <%= f.input :library, label: 'What is the name of your library?' %>
-  <%= f.input :address, label: 'What is the address of your library?' %>  
-  <%= f.input :librarian, label: 'Contact Name'%>
-  <%= f.input :program, label: 'Which program would you like to request?' %>
-  <%= f.input :email, label: 'Contact email' %>
-  <%= f.input :phone, label: 'Phone Number'%>
-  <%= f.input :date, hint: '"June 16th"' %>
-  <%= f.input :time, hint: '"11:00am"'%>
- <%= f.input :confirmation %>
-  <%= f.button :submit %>
-<% end %>
+
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@request) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <%= f.submit "Update Request", class: "btn btn-primary" %>
+      <br><br><br><br><br>
+      <%= f.label :confirmation, "Leave Box Unchecked" %>
+      <%= f.check_box :confirmation, class: 'form-control' %>
+
+
+      <%= f.label :library %>
+      <%= f.text_field :library, class: 'form-control' %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :address %>
+      <%= f.text_field :address, class: 'form-control' %>
+
+      <%= f.label :librarian, "Contact Name" %>
+      <%= f.text_field :librarian, class: 'form-control' %>
+
+      <%= f.label :phone, "Contact Phone Number" %>
+      <%= f.phone_field :phone, class: 'form-control' %>
+
+      <%= f.label :program %>
+      <%= f.select :program, ['LumpaWorld Challenge', 'Slow-Roll Marble Challenge', 'Jigglebots and Doodlebots',
+      'The Basics of Climate Change'], class: 'form-control' %>
+      
+      <%= f.label :date, " Requested Program Date" %>
+      <%= f.text_field :date, class: 'form-control' %>
+      
+      <%= f.label :time, "Requested Program Time" %>
+      <%= f.text_field :time, class: 'form-control' %>
+
+      <%= f.submit "Create Request", class: "btn btn-primary" %>
+    <% end %>
+
+
 <% end %>

@@ -7,8 +7,8 @@ class Request < ApplicationRecord
   validates :librarian, presence: true, length: { minimum: 8 }
   validates :program, presence: true, length: { minimum: 8 }
   validates :phone, presence: true, length: { minimum: 8 }
-  validates :date, presence: true
-  validates :time, presence: true
-  #validates :address, presence: true, length: { minimum: 12 }
+ #validates :date, presence: true
+ #validates :time, presence: true
+ #validates :address, presence: true, length: { minimum: 12 }
 
 end

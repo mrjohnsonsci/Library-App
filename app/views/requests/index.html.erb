@@ -31,6 +31,7 @@ Please check the availibity your requested date below.
   </thead>
 
   <tbody>
+    <% @requests.sort_by {|obj| obj.date}  %>    
     <% @requests.each do |request|  %>
       <tr>
         <% if request.confirmation != true %>
@@ -38,9 +39,9 @@ Please check the availibity your requested date below.
           <td><%= request.program %></td>
           <td><%= request.date %></td>
           <td><%= request.time %></td>
-          <td><%= if request.created_at > 5.minutes.ago  then link_to 'Show', request end %></td>
-          <td><%= if request.created_at > 5.minutes.ago  then link_to 'Edit', edit_request_path(request)  end %></td>
-          <td><%= if request.created_at > 5.minutes.ago  then link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } end %></td>
+          <td><%= if request.created_at > 30.seconds.ago  then link_to 'Show', request end %></td>
+          <td><%= if request.created_at > 30.seconds.ago  then link_to 'Edit', edit_request_path(request)  end %></td>
+          <td><%= if request.created_at > 30.seconds.ago  then link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } end %></td>
        <% end %>
       </tr>
     <% end %>
