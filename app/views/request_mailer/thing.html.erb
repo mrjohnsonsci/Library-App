@@ -1,12 +1,21 @@
-<h1>Sample App</h1>
+<h1>Library Program Request</h1>
 
 <p>Hi <%= @request.librarian %>,</p>
 
 <p>I have recieved your request for a library program. I will be replying to the email to confirm the date and the time. 
 <br><br><br>
-If you need to make any changes or this request was made in error, please let me know. 
-<br><br>
+If you need to make any changes or this request was made in error, please let me know. <br>
+</p>
 
-Here are the details of your request.</p>
+<h1>Here are the details of your request.</h1>
+<h2>Program Requested: <%= @request.program %></h2>
+Date: <%= @request.date %><br>
+Time: <%= @request.time %><br><br>
 
+
+Library Details:<br>
+<%= @request.librarian %><br>
+<%= @request.email %><br>
+<%= @request.library %><br>
+<%= @request.address %><br>
 

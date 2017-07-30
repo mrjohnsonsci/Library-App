@@ -15,7 +15,7 @@ class RequestMailerPreview < ActionMailer::Preview
                email: email,
                phone: phone,
                date: d,
-               time: "1:00 pm",
+               time: Time.now,
                address: "317 Pinecrest Ct SW, Pine Island, MN 55963",
                confirmation: false)
     RequestMailer.thing(new)
