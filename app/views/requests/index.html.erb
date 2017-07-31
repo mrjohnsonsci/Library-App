@@ -31,7 +31,7 @@ Please check the availibity your requested date below.
   </thead>
 
   <tbody>
-    <% @requests.sort_by {|obj| obj.date}  %>    
+    <%# @requests.sort_by {|obj| obj.date}  %>    
     <% @requests.each do |request|  %>
       <tr>
         <% if request.confirmation != true %>

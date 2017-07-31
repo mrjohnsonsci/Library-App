@@ -32,6 +32,8 @@ class RequestsController < ApplicationController
 
     respond_to do |format|
       if @request.save
+        RequestMailer.thing(@request).deliver_now
+        flash[:info] = "Your request has been emailed. I will respond to your request soon."
         format.html { redirect_to @request, notice: 'Request was successfully created. You may edit or delete your request for 5 minutes.' }
         format.json { render :show, status: :created, location: @request }
       else
