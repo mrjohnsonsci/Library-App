@@ -1,5 +1,5 @@
 class Request < ApplicationRecord
-   #attr_accessor :librarian, :library, :email, :address, :date, :time, :program
+  attr_accessor :librarian, :library, :email, :address, :date, :time, :program
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX }
