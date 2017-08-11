@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get    '/future',     to: 'programs#future'
   get    '/overview',   to: 'programs#overview'
   get    '/rock',       to: 'programs#rock'
+  get    '/maker',      to: 'programs#maker'
   get    '/space',      to: 'programs#space'
   get    '/confirm',    to: 'requests#confirm'
   get 'programs/requests'

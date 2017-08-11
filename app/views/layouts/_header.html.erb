@@ -32,24 +32,23 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Programs <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="programs">All Programs</a></li>
+                <li><%= link_to "Programs", programs_path %></li>
                 <li role="separator" class="divider"></li>
                 <li class="dropdown-header">Programs</li>
-                <li><a href="rock">Libraries Rock 2018 Summer Reading</a></li>
-                <li><a href="marble">The Slow-Roll Marble Challenge</a></li>
-                <li><a href="lumpa">LumpaWorld Engineering Challenge</a></li>
-                <li><a href="doodle">Jigglebots and Doodlebugs</a></li>
-                <li role="separator" class="divider"></li>
+                <li><%= link_to "Libraries Rock 2018 Summer Reading", rock_path %></li>
+                <li><%= link_to "The Slow-Roll Marble Challenge", marble_path %></li>
+                <li><%= link_to "LumpaWorld Engineering Challenge", lumpa_path %></li>
+               <li><%= link_to "Jigglebots and Doodlebugs", doodle_path %></li>
+               <li role="separator" class="divider"></li>
                 <li class="dropdown-header">Other Offerings</li>
-                <li><a href="maker">Makerspace Constultant</a></li>
-                <li><a href="climate">Climate Change 101</a></li>
-              </ul>
+                <li><%= link_to "Makerspace Constultant", maker_path %></li>
+                <li><%= link_to "Climate Change 101", climate_path %></li>
+                </ul>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-
-            <li class="active"><a href='requests'>Request A Program <span class="sr-only">(current)</span></a></li>
-          </ul>
+               <li><%= link_to "Request A Program", requests_path %></li>
+             </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
