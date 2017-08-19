@@ -7,11 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 25.times do |n|
   l  = Faker::Name.name
-  lib  = "Library-#{n+1}"
-  phone  = "(507) 555 -01 #{0000000 + (3 * n)}"  
+  lib  =   Faker::University.name
+  phone  = Faker::PhoneNumber.phone_number  
   email = "example-#{n+1}@example.org"
-  D = "2018-06-#{n+10}"
-  
+  D = Faker::Date.forward(60)
+
   Request.create!(librarian:  l,
                library: lib,
                program: "LumpaWorld Challenge",
@@ -19,7 +19,7 @@
                phone: phone,
                date: D,
                time: "1:00 pm",
-               address: "317 Pinecrest Ct SW, Pine Island, MN 55963",
+               address: Faker::Address.street_address,
                confirmation: false)
                
                                 

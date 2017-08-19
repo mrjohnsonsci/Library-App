@@ -5,10 +5,13 @@ class RequestsController < ApplicationController
   # GET /requests.json
   def index
     @requests = Request.all
+   # @requests = @requests.sort_by &:date
+   # @request.sort! { |a,b| a.date <=> b.date }
   end
 
   def confirm
     @requests = Request.all
+    #@request.sort! { |a,b| a.date <=> b.date }
   end
 
   # GET /requests/1

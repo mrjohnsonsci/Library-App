@@ -18,12 +18,13 @@ ActiveRecord::Schema.define(version: 20170723033248) do
     t.string   "program"
     t.string   "email"
     t.string   "phone"
-    t.string   "date"
+    t.date     "date"
     t.string   "time"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "address"
     t.boolean  "confirmation"
+    t.index ["date"], name: "index_requests_on_date"
   end
 
 end

@@ -6,10 +6,11 @@ class CreateRequests < ActiveRecord::Migration[5.0]
       t.string :program
       t.string :email
       t.string :phone
-      t.string :date
+      t.date :date
       t.string :time
 
       t.timestamps
     end
+    add_index :requests, [:date]
   end
 end
