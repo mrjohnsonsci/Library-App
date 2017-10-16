@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   get    '/maker',      to: 'programs#maker'
   get    '/space',      to: 'programs#space'
   get    '/confirm',    to: 'requests#confirm'
+  get    '/resources',  to: 'static_pages#media'
+  get    '/request',  to: 'static_pages#request' 
+  get    'programs/request',  to: 'static_pages#request' 
   get 'programs/requests'
   get 'programs/lumpa'
   get 'programs/marble'
@@ -24,6 +27,6 @@ Rails.application.routes.draw do
   get 'programs/overview'
   get 'programs/rock'
   get 'programs/space'
-  resources :requests
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
